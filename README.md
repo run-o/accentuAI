@@ -17,6 +17,23 @@ First install the required version of python as defined in the project (3.12.7) 
 - install dev requirements: `pip install -r requirements-dev.txt`
 - install requirements: `pip install -r requirements.txt`
 
+### Hosted LLM Setup: OpenAI API
+
+- created an account with OpenAI API compatible hosted LLM
+- retrieve the base URL and API key
+- create a client with the base URL and API key: `client = OpenAI(base_url, api_key)`
+- call the API with desired model and prompt: `client.chat.completions.create(model=..., messages=...)`
+
+### Local LLM Setup: OLlama
+
+- install Ollama: `brew install ollama`
+- start the server: `ollama serve`
+- get desired model: `ollama pull mistral`
+- call the server locally: 
+
+### Local LLM Setup: HuggingFace transformers
+
+
 ## Running the API
 
 - run the server with: `./run-server.sh`

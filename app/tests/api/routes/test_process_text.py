@@ -17,6 +17,6 @@ def test_correct_text_with_language(client: TestClient):
     assert response.json() == TEST_TEXT_ACCENTS
 
 def test_correct_text_with_grammar_correction(client: TestClient):
-    response = client.post("/text/correct/", json={"text": TEST_TEXT_INCORRECT_GRAMMAR, "correct_grammar": True})
+    response = client.post("/text/correct/", json={"text": TEST_TEXT_INCORRECT_GRAMMAR, "language": "French", "correct_grammar": True})
     assert response.status_code == 200
     assert response.json() == TEST_TEXT_ACCENTS
