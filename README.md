@@ -33,6 +33,9 @@ First install the required version of python as defined in the project (3.12.7) 
 
 ### Local LLM Setup: HuggingFace transformers
 
+- install transformers (this includes huggingface-hub): `pip install transformers`
+- download the desired model locally: `huggingface-cli download google/flan-t5-small`
+- 
 
 ## Running the API
 
