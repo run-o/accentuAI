@@ -30,6 +30,12 @@ First install the required version of python as defined in the project (3.12.7) 
 - start the server: `ollama serve`
 - get desired model: `ollama pull mistral`
 - call the server locally: 
+    ```
+    requests.post(
+        "http://localhost:11434/api/generate",
+        json={"model": "mistral", "prompt": prompt, "stream": False}
+    )
+    ```
 
 ### Local LLM Setup: HuggingFace transformers
 
